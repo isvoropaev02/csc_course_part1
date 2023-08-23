@@ -1,6 +1,6 @@
 from os import listdir, walk, scandir, remove
 
-path = "C:\\Users\\isvoropaev\\Desktop\\c++\\mingw_trial"
+path = "C:\\Users\\isvoropaev\\Desktop\\c++\\csc_course_part1"
 
 
 def list_directory(path=path):
