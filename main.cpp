@@ -15,6 +15,7 @@ int main() {
     int a[2] = {2, 4};
     std::cout <<"double: " << sizeof(double) << " bytes" << std::endl;
     std::cout <<"char: " << sizeof(char) << " bytes" << std::endl;
+    std::cout <<"size_t: " << sizeof(size_t) << " bytes" << std::endl;
     return 0;
 }
 
