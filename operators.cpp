@@ -13,6 +13,9 @@ struct Rational
     void inv();
     double to_double() const;
 
+    int get_numerator() const { return this->numerator_; }
+    int get_denominator() const { return this->denominator_; }
+
     Rational &operator+=(Rational rational)
     {
         this->add(rational);
@@ -57,3 +60,21 @@ Rational operator-(Rational left, Rational const &right) { return left -= right;
 Rational operator*(Rational left, Rational const &right) { return left *= right; }
 
 Rational operator/(Rational left, Rational const &right) { return left /= right; }
+
+bool operator==(const Rational &left, const Rational &right)
+{
+    return (left.get_numerator() * right.get_denominator() == right.get_numerator() * left.get_denominator());
+}
+
+bool operator!=(const Rational &left, const Rational &right) { return !(left == right); }
+
+bool operator<(const Rational &left, const Rational &right)
+{
+    return (left.get_numerator() * right.get_denominator() < right.get_numerator() * left.get_denominator());
+}
+
+bool operator>(const Rational &left, const Rational &right) { return right < left; }
+
+bool operator<=(const Rational &left, const Rational &right) { return !(right < left); }
+
+bool operator>=(const Rational &left, const Rational &right) { return !(left < right); }
