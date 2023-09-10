@@ -47,6 +47,7 @@ struct Rational
         Rational tmp(this->numerator_, this->denominator_);
         return tmp;
     }
+    operator double() const { return this->to_double(); }
 
 private:
     int numerator_;
