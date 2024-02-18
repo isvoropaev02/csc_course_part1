@@ -1,5 +1,7 @@
 # include <iostream>
 
+static int tre = 0;
+
 class Base
 {
 private:
