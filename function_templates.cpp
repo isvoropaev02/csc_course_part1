@@ -66,7 +66,7 @@ struct SameType
 };
 
 template <typename T>
-struct SameType <T, T>
+struct SameType<T, T>
 {
     const static bool value = true;
 };
